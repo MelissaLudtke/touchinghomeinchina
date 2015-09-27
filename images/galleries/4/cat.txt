@@ -1,0 +1,13 @@
+./
+../
+1_Jennie_cabinet.jpg*
+2_Jennie_stuffed_animal.jpg*
+3_Jennie_hat.jpg*
+4_Jennie_1st_grade.jpg*
+5_Jennie_beach.jpg*
+6_Jennie_Horse.jpg*
+7_Jennie_Bat_Mitzvah.jpg*
+8_Jennie_Israel.JPG*
+9_Jennie_friends_school.jpg*
+Captions_for_Gallery__4_CH1.docx*
+cat.txt
