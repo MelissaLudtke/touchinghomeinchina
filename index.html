@@ -73,7 +73,7 @@
   </ul>
 </nav>
 
-<div id="cover" style="width:100vw">
+<div id="cover" class="full-width" style="width:100vw">
   <img alt="maya-red-shoes" src="images/maya-red-shoes.jpg" style="width:100vw"/>
 </div>
 <div id="black-bg-white-text">
@@ -82,7 +82,7 @@
   </div>
 </div>
 <a name="abandoned-baby"></a>
-<div id="cover-abandoned-baby">
+<div id="cover-abandoned-baby" class="full-width" >
   <img src="images/cover-cribs.jpg" alt='cover-cribs'>
 </div>
 
@@ -453,6 +453,33 @@
 
         window.addEventListener('scroll', checkScroll, false);
         window.addEventListener('resize', checkScroll, false);
+
+
+      function checkScroll2() {
+        var full_widths = document.getElementsByClassName('full-width')
+        for(var i = 0; i < full_widths.length; i++) {
+
+          var full_width = full_widths[i];
+
+        var x = full_width.offsetLeft, y = full_width.offsetTop, w = full_width.offsetWidth, h = full_width.offsetHeight, r = x + w, //right
+            b = y + h, //bottom
+            visibleX, visibleY, visible;
+
+            visibleX = Math.max(0, Math.min(w, window.pageXOffset + window.innerWidth - x, r - window.pageXOffset));
+            visibleY = Math.max(0, Math.min(h, window.pageYOffset + window.innerHeight - y, b - window.pageYOffset));
+
+            visible = visibleX * visibleY / (w * h);
+            fraction = 0.4;
+            if (visible > fraction) {
+                document.getElementById('social-sidebar').style.display = "none"            
+              } else {
+                document.getElementById('social-sidebar').style.display = ""
+            }
+          }
+        }
+
+        window.addEventListener('scroll', checkScroll2, false);
+        window.addEventListener('resize', checkScroll2, false);
       </script>
 </body>
 </html>
