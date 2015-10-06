@@ -478,7 +478,7 @@
             visibleY = Math.max(0, Math.min(h, window.pageYOffset + window.innerHeight - y, b - window.pageYOffset));
 
             visible = visibleX * visibleY / (w * h);
-            fraction = 0.1;
+            fraction = 0;
             if (visible > fraction) {
                 document.getElementById('social-sidebar').style.display = "none"            
               } else {
