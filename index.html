@@ -83,7 +83,8 @@
   </ul>
 </nav>
 
-<div id="cover" class="full-width" style="width:100vw">
+<div class="full-width">
+<div id="cover" style="width:100vw">
   <img alt="maya-red-shoes" src="images/maya-red-shoes.jpg" style="width:100vw"/>
 </div>
 <div id="black-bg-white-text">
@@ -92,10 +93,10 @@
   </div>
 </div>
 <a name="abandoned-baby"></a>
-<div id="cover-abandoned-baby" style="width:100vw" class="full-width" >
+<div id="cover-abandoned-baby" style="width:100vw">
   <img src="images/cover-cribs.jpg" style="width:100vw" alt='cover-cribs'>
 </div>
-
+</div>
 <div class="main-content">
 
   <p><span class="lead-c">D</span>id the baby cry when the hands holding her set her down? Or was she sleeping so soundly that when placed gently on the ground she did not wake up? Swaddled for her journey on this September day in 1996, a cool morning breeze might have swept across her face as she was being carried in darkness from the place where she was born to this place where she would be abandoned. Was she left along the well-trodden path leading to fields so that farmers heading there would find her? Or near the doorway where a childless family lived? Or was this day-old infant set down along the side of the road near the bridge that Xixiashu Town’s factory workers crossed at sunrise? When the rising sun wakened her, did she cry to be held and fed? </p>
@@ -399,7 +400,8 @@
 
     <div class="footer">
 	<div class="col1">
-		<p>Written and Produced by</br> Melissa Ludtke</p>
+		<p>Written and Produced by</br> <a
+	  href="https://en.wikipedia.org/wiki/Melissa_Ludtke">Melissa Ludtke</a></p>
 		<p>Visual Creation by</br> <a href="http://www.juliemallozzi.com/">Julie Mallozzi</a></p>
 		<p>Website by</br> <a href="https://twitter.com/niteshvgupta">Nitesh</a></p>
 	</div>
@@ -433,14 +435,26 @@
 		</ul>
 	</div>
 </div>
+
     <script src="js/main.min.js"></script>
     <script> 
       var videos = document.getElementsByTagName("video");
+      var full_widths = document.getElementsByClassName('full-width')
 
       function checkScroll() {
-        for(var i = 0; i < videos.length; i++) {
 
-          var video = videos[i];
+          var video = videos[0];
+          var full_width = full_widths[0];
+
+            var x2 = full_width.offsetLeft, y2 = full_width.offsetTop, w2 = full_width.offsetWidth, h2 = full_width.offsetHeight, r2 = x2 + w2, //right
+            b2 = y2 + h2, //bottom
+            visibleX2, visibleY2, visible2;
+
+            visibleX2 = Math.max(0, Math.min(w2, window.pageXOffset + window.innerWidth - x2, r2 - window.pageXOffset));
+            visibleY2 = Math.max(0, Math.min(h2, window.pageYOffset + window.innerHeight - y2, b2 - window.pageYOffset));
+
+            visible2 = visibleX2 * visibleY2 / (w2 * h2);
+            fraction2 = 0;
 
         var x = video.offsetLeft, y = video.offsetTop, w = video.offsetWidth, h = video.offsetHeight, r = x + w, //right
             b = y + h, //bottom
@@ -451,44 +465,22 @@
 
             visible = visibleX * visibleY / (w * h);
             fraction = 0.4;
+            /* if video is visible */
             if (visible > fraction) {
-                video.play();
-                document.getElementById('social-sidebar').style.display = "none"            
+                video.play();       
               } else {
                 video.pause();
-                document.getElementById('social-sidebar').style.display = ""
+            }
+            if (visible > fraction || visible2 > fraction2) {
+              document.getElementById('social-sidebar').style.display = "none"  
+            }
+            else {
+                document.getElementById('social-sidebar').style.display = "block"
             }
           }
-        }
 
         window.addEventListener('scroll', checkScroll, false);
         window.addEventListener('resize', checkScroll, false);
-        
-        var full_widths = document.getElementsByClassName('full-width')
-      function checkScroll2() {
-        for(var i = 0; i < full_widths.length; i++) {
-
-          var full_width = full_widths[i];
-
-        var x = full_width.offsetLeft, y = full_width.offsetTop, w = full_width.offsetWidth, h = full_width.offsetHeight, r = x + w, //right
-            b = y + h, //bottom
-            visibleX, visibleY, visible;
-
-            visibleX = Math.max(0, Math.min(w, window.pageXOffset + window.innerWidth - x, r - window.pageXOffset));
-            visibleY = Math.max(0, Math.min(h, window.pageYOffset + window.innerHeight - y, b - window.pageYOffset));
-
-            visible = visibleX * visibleY / (w * h);
-            fraction = 0;
-            if (visible > fraction) {
-                document.getElementById('social-sidebar').style.display = "none"            
-              } else {
-                document.getElementById('social-sidebar').style.display = ""
-            }
-          }
-        }
-
-        window.addEventListener('scroll', checkScroll2, false);
-        window.addEventListener('resize', checkScroll2, false);
       </script>
 </body>
 </html>
