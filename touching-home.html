@@ -354,7 +354,7 @@
             visible = visibleX * visibleY / (w * h);
             fraction = 0.4;
             /* if video is visible */
-            if (visible > fraction) {
+            if (visible > fraction || window.innerWidth < 500) {
                 document.getElementById('social-sidebar').style.display = "none"  
             } else {
                 document.getElementById('social-sidebar').style.display = "block"
@@ -370,18 +370,6 @@
 var openGallery7 = function() {
 var pswpElement = document.querySelectorAll('.pswp')[0];
 
-/*
-1-changzhou-temple-city-overview.jpg*
-10-maya-changzhou-from-temple.jpg*
-2-changzhou-underground-mall.jpg*
-3-maya-changzhou-park-talking.jpg*
-4-older-woman-park-changzhou.jpg*
-5-maya-park-boy-no-pants-veronica-cropped.jpg*
-6-changzhou-park-from-pagoda-walkway.jpg*
-7-jennie-boat-changzhou.jpg*
-8-maya-boat-changzhou.jpg*
-9-maya-red-shoes-boat-changzhou.jpg*
-*/
 // build items array
 var items = [
   {
