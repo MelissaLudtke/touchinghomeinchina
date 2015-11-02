@@ -472,7 +472,7 @@
               } else {
                 video.pause();
             }
-            if (visible > fraction || visible2 > fraction2) {
+            if (visible > fraction || visible2 > fraction2 || window.innerWidth < 500) {
               document.getElementById('social-sidebar').style.display = "none"  
             }
             else {
