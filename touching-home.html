@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link rel="stylesheet" type="text/css" href="css/main.css">
+     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css"/>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -17,6 +18,7 @@
 </script>
 <script src="js/photoswipe.min.js"></script>
 <script src="js/photoswipe-ui-default.min.js"></script>
+<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
 </head>
 <body>
 <div class="m-wrapper">
@@ -158,14 +160,12 @@
 
 <p>Maya and Jennie sit close on the couch in the corner of the living room. Their proximity reminds me of their time as babies in orphanage cribs that touched end-to-end. Neither girl needs to explain the emotions she is experiencing. The girls have shared many stages of their life journey – from being abandoned as newborns to growing up in Caucasian families near Boston. Now each has come “home” in search of those parts of herself that she might find in a tiny town in China.  In another part of the living room, Jane Liu, who is translating for the girls, is talking with Yan Yujiao on her cell phone, trying to figure out a place for Maya and her to meet. Yujiao is one of the girls who expressed interest in getting to know Maya when she came to her town. Maya whispers in a voice so soft that Jennie has to lean in to hear: “The towns we would have grown up in, the people we might have met...” </p>
 
-<div class="img-half right">
-    <img src="images/touching-home/map-of-china.jpg" alt='map-of-china'/>
-    <div class="caption-text">Map of China</div>
-</div>
-
 <p>Perhaps Maya meant only to exhale but instead let her feelings escape, releasing anxiety about being introduced to Yujiao. Maya’s journey of discovery, once contemplated from the safe distance of 12 time zones away, is about to begin. <a href="https://www.youtube.com/watch?v=Vc0vBmqg-2I">Meeting Yujiao</a> will signal the start of nearly three weeks when Maya and Jennie have the chance to fit new pieces into the puzzle of their dual identity as Chinese daughters in Caucasian families. </p>
-
+</div>
+<div id="map" style="height:100vh;width:100vw;"></div>
+<div class="main-content">
 <p>Soon, it will be Jennie’s turn to travel 25 kilometers in a different direction from Changzhou to Xixiashu, where she was abandoned when she was one day old. Before she goes, Jennie wants to learn how to pronounce Xixiashu. Chinese isn’t taught in Jennie’s high school; she studies French. Maya coaches Jennie on how to swish the “S” in her town’s name: “She-Sha-Shu.” Next, she teaches her how to say “I am American” in Mandarin. </p>
+
 
 <h3>
     <img class="caligraphy" alt='3-i-am-american' src="images/caligraphy/3-i-am-american.png">
@@ -196,7 +196,6 @@
     <img src="images/touching-home/2-xiaxi-water-houses.jpg" alt='xiaxi-water-houses'/>
     <div class="caption-text">The flowers and trees in Xiaxi make Maya feel at home. When it is time to return to America, she digs a cupful of Xiaxi soil to bring home.</div>
 </div>
-
 
 <p>Most families live in thick-walled houses close to the villages’ narrow roads. Trucks hauling the fields’ harvest often halt conversations as their piercing roar reverberates off concrete walls. Grandparents here grew up in <a href="https://images.search.yahoo.com/yhs/search;_ylt=A0LEVoBMg8NVqzgADOUnnIlQ;_ylu=X3oDMTByMjB0aG5zBGNvbG8DYmYxBHBvcwMxBHZ0aWQDBHNlYwNzYw--?p=Earthen+Homes+Pictures+China&fr=yhs-mozilla-002&hspart=mozilla&hsimp=yhs-002">earthen homes</a> – cooler in summer, warmer in winter than those that have replaced them. Back then, rice and wheat were more popular crops and farmers transported the harvest on their backs. Earthen houses fell out of favor a few decades ago, about the same time that tree and flower farming were replacing food crops. Xiaxi’s harvest of trees and flowers gets planted along thousands of miles of newly constructed highways in China and around quickly built high-rise buildings in need of instant greenery. </p>
 
@@ -471,6 +470,28 @@ gallery.init();
 };
 
 document.getElementById('gallery7').onclick = openGallery7;
+</script>
+
+<script>
+/* MAP */
+
+map = new L.Map('map');
+
+	// create the tile layer with correct attribution
+	var osmUrl='http://{s}.tile.osm.org/{z}/{x}/{y}.png';
+	var osmAttrib='Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
+	var osm = new L.TileLayer(osmUrl, {minZoom: 4, maxZoom: 15, attribution: osmAttrib});		
+
+	map.setView(new L.LatLng(35.0, 103.0),5);
+	map.addLayer(osm);
+	map.scrollWheelZoom.disable();
+
+	L.marker([31.78, 119.96]).addTo(map)
+		.bindPopup('Changzhou is an ancient Chinese city dating back 3000 years. Today, it is a prosperous prefecture-level city with a population of 4.6 million residents. Located along the heavily traveled Yangtze River, its major industries include textiles, engineering and high technology. The rural farming towns of Xiaxi and Xixiashu, where Maya and Jennie were abandoned, are part of the expansive Changzhou region. Each of the towns is located about 25 kilometers from the core city of Changzhou.')
+
+	L.marker([32.9, 119.8]).addTo(map)
+		.bindPopup('From its long Eastern coastline, the province of Jiangsu pushes west to Nanjing, its capital. It is the most densely populated of China’s 23 provinces and known as the “land of fish and rice.” Since economic reforms in the 1990s, Jiangsu has become a leading industrial and technology center that draws foreign investment, making it among the wealthier provinces.')
+
 </script>
 </body>
 </html>
