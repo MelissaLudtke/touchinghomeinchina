@@ -485,6 +485,8 @@ map = new L.Map('map');
 	map.setView(new L.LatLng(35.0, 103.0),5);
 	map.addLayer(osm);
 	map.scrollWheelZoom.disable();
+  map.touchZoom.disable();
+  map.dragging.disable();
 
 	L.marker([31.78, 119.96]).addTo(map)
 		.bindPopup('Changzhou is an ancient Chinese city dating back 3000 years. Today, it is a prosperous prefecture-level city with a population of 4.6 million residents. Located along the heavily traveled Yangtze River, its major industries include textiles, engineering and high technology. The rural farming towns of Xiaxi and Xixiashu, where Maya and Jennie were abandoned, are part of the expansive Changzhou region. Each of the towns is located about 25 kilometers from the core city of Changzhou.')
