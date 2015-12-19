@@ -478,11 +478,12 @@ document.getElementById('gallery7').onclick = openGallery7;
 map = new L.Map('map');
 
 	// create the tile layer with correct attribution
-	var osmUrl='http://{s}.tile.osm.org/{z}/{x}/{y}.png';
+var osmUrl='http://otile{s}.mqcdn.com/tiles/1.0.0/{type}/{z}/{x}/{y}.{ext}';
 	var osmAttrib='Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
-	var osm = new L.TileLayer(osmUrl, {minZoom: 4, maxZoom: 15, attribution: osmAttrib});		
+	var osm = new L.TileLayer(osmUrl, {minZoom: 4, type: 'map', ext: 'jpg',
+    subdomains: '1234',  maxZoom: 15, attribution: osmAttrib});		
 
-	map.setView(new L.LatLng(35.0, 122.0),5);
+	map.setView(new L.LatLng(35.0, 118.0),5);
 	map.addLayer(osm);
 	map.scrollWheelZoom.disable();
   map.touchZoom.disable();
