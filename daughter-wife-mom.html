@@ -37,11 +37,60 @@ document.getElementById('m-toggle').addEventListener('click', function (e) { tog
 
 <div id="gallery7" class="img img-half gallery"> <img src="images/galleries/7/1-melissa-maya-blue-thumb.jpg" alt="melissa-thumb"/> <div class="caption-text" style="max-width:700px;margin-left:auto;margin-right:auto"> <span class="caption-title" style="margin-left:auto;margin-right:auto"> Maya and Her Mom</span> </div> </div>
 
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true"> <div class="pswp__bg"></div> <div class="pswp__scroll-wrap"> <div class="pswp__container"> <div class="pswp__item"></div> <div class="pswp__item"></div> <div class="pswp__item"></div> </div>
+      <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+      <!-- Background of PhotoSwipe. 
+           It's a separate element as animating opacity is faster than rgba(). -->
+      <div class="pswp__bg"></div>
+      <!-- Slides wrapper with overflow:hidden. -->
+      <div class="pswp__scroll-wrap">
+          <!-- Container that holds slides. 
+              PhotoSwipe keeps only 3 of them in the DOM to save memory.
+              Don't modify these 3 pswp__item elements, data is added later on. -->
+          <div class="pswp__container">
+              <div class="pswp__item"></div>
+              <div class="pswp__item"></div>
+              <div class="pswp__item"></div>
+          </div>
+          <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+          <div class="pswp__ui pswp__ui--hidden">
+              <div class="pswp__top-bar">
+                  <!--  Controls are self-explanatory. Order can be changed. -->
+                  <div class="pswp__counter"></div>
 
-<div class="pswp__ui pswp__ui--hidden"> <div class="pswp__top-bar"> <div class="pswp__counter"></div> <button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title="Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                  <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
 
-<div class="pswp__preloader"> <div class="pswp__preloader__icn"> <div class="pswp__preloader__cut"> <div class="pswp__preloader__donut"></div> </div> </div> </div> </div> </div> </div> </div> <p>If generational patterns hold, Maya and Jennie’s Chinese friends will be married by the time they are 25, will become mothers soon after, and will live in the town where they were raised. That’s the typical experience for young women in rural China. In cities, the age of marriage is likely to be older (<a href="http://www.bbc.com/news/magazine-21320560"><span style='font-family:Garamond'>most marry by 27</span></a>) – though pressures exerted by family and society to marry are no less intense. </p>
+                  <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                  <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                  <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                  <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                  <!-- element will get class pswp__preloader--active when preloader is running -->
+                  <div class="pswp__preloader">
+                      <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                          <div class="pswp__preloader__donut"></div>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                  <div class="pswp__share-tooltip"></div> 
+              </div>
+              <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+              </button>
+              <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+              </button>
+              <div class="pswp__caption">
+                  <div class="pswp__caption__center"></div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+<p>If generational patterns hold, Maya and Jennie’s Chinese friends will be married by the time they are 25, will become mothers soon after, and will live in the town where they were raised. That’s the typical experience for young women in rural China. In cities, the age of marriage is likely to be older (<a href="http://www.bbc.com/news/magazine-21320560"><span style='font-family:Garamond'>most marry by 27</span></a>) – though pressures exerted by family and society to marry are no less intense. </p>
 
 <p>Maya and Jennie’s personal pathways are less predictable.</p>
 
@@ -132,6 +181,39 @@ document.getElementById('m-toggle').addEventListener('click', function (e) { tog
 
 <p>Only-child daughter families are <a href="http://www.bloomberg.com/news/articles/2015-03-24/no-country-for-kids-these-towns-show-what-china-will-become-i7nsvv1y"><span style='font-family:Garamond'>upending China’s centuries-old traditions of elder care</span></a>. A son bears responsibility for his aging parents, albeit his wife is generally expected to perform the caregiving. Her brother’s wife will care for her parents. This is what filial piety looks like. It is depicted in its Chinese character <i>xiao</i>, in which the character <i>lao</i> (old) rests on top of <i>zi</i> (son); the son carries his elders on his back. If there is no son, and thus no son’s wife, how is his duty fulfilled?</p>
 
+</div>
+
+<div class="aside">
+    <div class="aside-title" style="padding-bottom:20px; font-weight:500">
+        <h3>China's New Family Form</h3>
+    </div>
+
+    <div style="max-width: 500px;margin:0 auto;">
+      <div style="display: inline-block; width: 49.5%;"> 
+        <img style="width: 30%;" src="images/daughter-wife-mom/grandfather-brick.jpg"/>
+        <img style="width: 30%;" src="images/daughter-wife-mom/grandmother-brick.jpg"/>
+      </div>
+
+      <div style="display: inline-block; width: 49.5%; float: right;"> 
+        <img style="width: 30%; float: right;" src="images/daughter-wife-mom/grandfather-brick.jpg"/>
+        <img style="width: 30%; float: right;" src="images/daughter-wife-mom/grandmother-brick.jpg"/>
+     </div>
+
+     <div style="display: block; width: 49.5%; margin: 0 auto;"> 
+        <img style="width: 30%; margin-left: 20%;" src="images/daughter-wife-mom/man-red.jpg"/>
+        <img style="width: 30%; float: right; margin-right: 20%;" src="images/daughter-wife-mom/woman-red.jpg"/>
+     </div>
+
+
+     <div style="display: block; width: 49.5%; margin: 0 auto;"> 
+        <img style="width: 30%; margin: 0 auto; display: block;" src="images/daughter-wife-mom/young-pink.jpg"/>
+     </div>
+    </div>
+    <p style="font-size: 1em;">China’s only children are now becoming parents. As more do, the typical Chinese family assumes the shape of an inverted triangle: four grandparents, two parents, and one child bearing the full weight of filial obligations. In China, the family is the de facto pension and elder care system. For centuries, almost every woman in China gave birth to at least one son, whose duty was to provide his elderly parents with financial and caregiving support. Now, many families have only a daughter, leading to huge changes in the centuries-old traditions of elder care.</p>
+</div>
+
+<div class="main-content">
+
 <p>Shan is an only-child daughter. Who will care for her parents when her duty, as a wife, will be to care for her husband’s parents?  Rural families receive little (or nothing) in pension income, and China has not constructed a system like Social Security in the U.S. to provide an adequate cushion of financial support, though <a href="http://www.theguardian.com/global-development/2012/oct/01/china-elderly-population-pensions-rethink"><span style='font-family:Garamond'>reform measures are underway</span></a>. Shan also wants to help her grandparents; already she can see their farm work becoming more challenging. “They are independent, so they don’t want me to worry about them,” she says, in the summer before she goes away to vocational college. “But I think I will support them because I am very grateful to them. They cared for me for many, many years. When I grow up, and they are older and older, I want to give them a happy time.”</p>
 
 <p>“How about your parents?”</p>
@@ -146,7 +228,14 @@ document.getElementById('m-toggle').addEventListener('click', function (e) { tog
 
 <p>When a girl is born in China, it’s considered her destiny to become a man’s wife before she turns 30, preferably a few years earlier. <a href="http://www.refinery29.com/2015/09/93045/leftover-ladies-china-single-asian-women-dating"><span style='font-family:Garamond'>Her family wants this for her</span></a>, even if she herself isn’t so eager to see it happen. If her career ambition or academic pursuits seem to delay her marriage, family tensions can escalate. Family words combine with societal messages to remind the errant daughter of her bridal duty.</p>
 
-<p>         Mengping, who was born in 1992, is the oldest of Maya and Jennie’s “hometown” friends. After she graduated from Changzhou University, she moved to Shanghai and lives in dorm accommodations with other rural job seekers. She works selling golf equipment. She likes what she does but without scheduled time off, her work tends to become her entire life. She’d like to find a job with dependable hours and the possibility of gaining more skills. Mengping knows she wants to work in a job she likes when she is married, and she wants some time to figure out what that will be.</p>
+ <div class="video right">
+          <iframe src="https://player.vimeo.com/video/140375253" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+          <div class="caption-text"><span class="caption-title"> The Grandmothers Speak Up
+</span> Hearing the girls talk about girlhood prompts their grandmothers to reflect on their own childhoods and wonder what’s next for their younger kin.
+</div>
+</div>
+
+<p>Mengping, who was born in 1992, is the oldest of Maya and Jennie’s “hometown” friends. After she graduated from Changzhou University, she moved to Shanghai and lives in dorm accommodations with other rural job seekers. She works selling golf equipment. She likes what she does but without scheduled time off, her work tends to become her entire life. She’d like to find a job with dependable hours and the possibility of gaining more skills. Mengping knows she wants to work in a job she likes when she is married, and she wants some time to figure out what that will be.</p>
 
 <p>The Chinese consider <a href="http://www.4panda.com/chinatips/culture/baby.htm"><span style='font-family: Garamond'>babies one year old when they are born</span></a>; children turn two after living for one year. Mengping is not eager for her 25th birthday to arrive. Already, it seems “too late” to do what she wants to do before she has to get married; for example, she’d like to spend time in Japan, since she majored in Japanese in college. Yet she knows that at home in Xiaxi Town, it’s late to find her a husband. Classmates from middle school are married, and her family worries that all the promising men will be taken soon.</p>
 
@@ -196,17 +285,26 @@ document.getElementById('m-toggle').addEventListener('click', function (e) { tog
 
 <p>“She’ll get married when she’s 25,” Liuhong declares of her daughter. Because Shan will “marry out [of the family],” her mom says, “the man should have a house. If she marries someone without a house, then I’ll buy her a house.”</p>
 
+
+ <div class="video">
+          <iframe src="https://player.vimeo.com/video/144315521" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+          <div class="caption-text"><span class="caption-title"> Talk of Marriage and Kids
+</span> At Lunar New Year, Chinese families expect 20-something children to bring news home of potential spouses. With Shan’s mother, talk turns to grandchildren, too.
+</div>
+</div>
+
+
 <p>With talk of marriage, talk of children follows. Here, mother and daughter strongly disagree. Not about her future child’s gender; each says that a son or a daughter is fine. It’s the number of children. “She should have two,” Liuhong says. “She doesn’t understand now, but when she’s my age [early 40s] she will. If she has two kids, they can keep each other company so neither gets lonely.”</p>
 
 <p>Across the room, Shan is sitting on the couch with a younger girl cousin. She fires back with defiant clarity:  “I say no.” Shan’s reasoning, which her cousin shares, is that two kids mean “too [much] trouble.” One will be enough. “Taking care of a child is a woman’s job, so I will care for my child by myself, not my husband,” Shan says. “As a man, his pressures will be heavy. If my job is not very busy, I will take care by myself, because I also want to reduce the mother’s stress.”</p>
 
 <p>“You want to reduce your mother’s stress?” an American visitor asks Shan.</p>
 
-<p>         “Reduce my husband’s mother’s stress,” she replies. “My mother has nothing to do after this. Just cooking and then go out to play cards. Her life will be really relaxed.”</p>
+<p>“Reduce my husband’s mother’s stress,” she replies. “My mother has nothing to do after this. Just cooking and then go out to play cards. Her life will be really relaxed.”</p>
 
-<p>         “Would you like that kind of life?”</p>
+<p>“Would you like that kind of life?”</p>
 
-<p>         “No!” Shan says emphatically. “I like the life of working outside the house, then when I come back I have meals with my family, and then after supper I take my child and husband outside to walk.”</p>
+<p>“No!” Shan says emphatically. “I like the life of working outside the house, then when I come back I have meals with my family, and then after supper I take my child and husband outside to walk.”</p>
 
 <p>As the mother-daughter volley continues, their words echo China’s conundrum: How do leaders persuade one-child policy daughters to have a second child now that the societal consequences of this policy are apparent?  Little by little the Chinese government have been lifting one-child limitations. By November 2013, <a href="http://www.womenofchina.cn/womenofchina/html1/news/china/16/8187-1.htm"><span style='font-family:Garamond'>Chinese lawmakers had proposed</span></a> that if a member of a couple was an only child, they were permitted to have two children. Then, in October 2015, China announced it was ending its 35-year old one-child policy to enable all couples to raise two children. Yet, because younger people were raised with accelerating affluence and spreading mobility, when educational achievement and opportunities spiked for young women, and many think as Shan does. <a href="http://www.theguardian.com/world/2015/oct/30/two-is-too-much-trouble-china-parents-rush-more-children"><span style='font-family:Garamond'>Two kids equal too much trouble</span></a>. And they are too expensive with home prices soaring, the finest education costing dearly, and childcare – in the absence of nearby relatives – adding mightily to the price tag.</p>
 
@@ -216,7 +314,14 @@ document.getElementById('m-toggle').addEventListener('click', function (e) { tog
 
 <p>Yuan’s activism alerts her to predictable barriers young women like these Xiaxi girls are likely to encounter. As more girls graduate from high school – and do better, on average, academically than boys – some <a href="http://www.nytimes.com/2012/10/08/world/asia/08iht-educlede08.html?n=Top%2fNews%2fWorld%2fCountries%20and%20Territories%2fChina&amp;_r=1"><span style='font-family:Garamond'>universities admit males with lower <i>gaokao</i> scores</span></a> than girls they reject. (In China, the <i>gaokao</i> exam is the sole measure used for university admittance.) Women students are <a href="http://www.womenofchina.cn/womenofchina/html1/news/china/1410/637-1.htm"><span style='font-family:Garamond'>steered away from certain majors</span></a>, notably national security – for example, police academies accept few women – along with others regarded as physically demanding, like geosciences and aeronautics. &quot;Due to the special nature of the work, it is not suitable for girls to apply&quot; to marine technology and engineering courses, an official at one maritime university told a reporter for a story about gender bias at universities. Disparaging treatment of female students and staff assistants by male faculty is a topic ripe for discussion on social media.  Still, despite these challenges and fewer women among China’s college-aged population, <a href="http://www.womenofchina.cn/womenofchina/html1/survey/16/7030-1.htm"><span style='font-family:Garamond'>females outnumber males as university students</span></a> at the undergraduate and master degree level.</p>
 
-<p>After they graduate, women often <a href="http://www.bbc.com/news/world-asia-24534782"><span style='font-family: Garamond'>confront discrimination in applying for jobs</span></a>. “Some advertisements say ‘no women, we only want men,’” Yuan tells me. “Others tell a woman she should not be married if she wants to apply for the job,” despite China’s 2008 Law on Employment Promotion prohibiting such practices. Some ads are explicit about what they seek in an employee: a sales job ad, for example, said the applicant must be “a pretty woman with height no less than 1.7 meters.”</p>
+<div class="aside">
+  <div class="aside-title">
+    <h5> Leftover Women </h5>
+    <p>In 2007, the All-China Women’s Federation, the state-sponsored organization tasked with representing women’s interests, labeled women who were not married by age 27 as “leftover women” (shengnu). Media campaigns use this stigmatizing term to chastise well-educated women for being too picky in choosing a husband. Cartoonists find the topic irresistible.</p>
+  </div>
+</div>
+
+    <p>After they graduate, women often <a href="http://www.bbc.com/news/world-asia-24534782"><span style='font-family: Garamond'>confront discrimination in applying for jobs</span></a>. “Some advertisements say ‘no women, we only want men,’” Yuan tells me. “Others tell a woman she should not be married if she wants to apply for the job,” despite China’s 2008 Law on Employment Promotion prohibiting such practices. Some ads are explicit about what they seek in an employee: a sales job ad, for example, said the applicant must be “a pretty woman with height no less than 1.7 meters.”</p>
 
 <p>The law exists, but few employers abide by it. Nor do authorities enforce it. Women rarely turn to the courts to secure their legal rights. It wasn’t until 2012 that a woman filed a gender discrimination lawsuit after a Beijing training school refused to hire her for an assistant’s job. She had been told that only men could apply. Soon, another young woman filed a <a href="http://www.womenofchina.cn/womenofchina/html1/features/rights/1502/1270-1.htm"><span style='font-family:Garamond'>similar lawsuit in Hangzhou</span></a> based on gender exclusion. Her case became the first in which a judge ruled that this kind of discrimination is illegal; the Beijing case had ended in a settlement.</p>
 
@@ -230,13 +335,22 @@ document.getElementById('m-toggle').addEventListener('click', function (e) { tog
 
 <p>A decade later, as a 27-year-old baseball reporter at <i>Sports Illustrated</i>, my name became synonymous with women’s rights as the <a href="http://law2.umkc.edu/faculty/projects/ftrials/communications/ludtke.html"><span style='font-family:Garamond'>winning plaintiff in a federal lawsuit</span></a> filed against Major League Baseball. I’d been denied access needed to interview athletes in locker rooms. Cartoonists reveled in showing what women’s rights look like in male athletes’ locker rooms.</p>
 
-<p>In Xiaxi, the girls raised personal safety as a challenge for them, but not for boys. They mentioned that parents must spend extra money to safely transport their daughters to school. “Society blames the victim of sexual assault, as her fault for getting hurt or losing her virginity,” Yuan says. “Society needs to support the victim to overcome what has happened; attitudes need to change.” According to surveys, family violence is prevalent in China, as it is in nearly every country. What sets China apart is that no national domestic violence law provides legal recourse for victims, though a statute was being drafted in the fall of 2015; women activists worked to strengthen it.</p>
+<p>In Xiaxi, the girls raised personal safety as a challenge for them, but not for boys. They mentioned that parents must spend extra money to safely transport their daughters to school. “Society blames the victim of sexual assault, as her fault for getting hurt or losing her virginity,” Yuan says. “Society needs to support the victim to overcome what has happened; attitudes need to change.” According to surveys, family violence is prevalent in China, as it is in nearly every country. What had set China apart was having no national domestic violence law to offer legal recourse for victims; however, in the fall of 2015, a statute was passed that women activists had worked to strengthen.</p>
+
+
+<div id="gallery10" class="img img-half gallery"> <img
+  src="images/galleries/10/womens-rights-thumb.jpg" alt="womens-rights-thumb"/> <div class="caption-text" style="max-width:700px;margin-left:auto;margin-right:auto"> 
+    <span class="caption-title" style="margin-left:auto;margin-right:auto">
+      Taking to the Streets </span>
+  </div>
+</div>
 
 <p>About a week after they girls had met with Yuan, Mengping and Maya talked again about girls being assaulted. “Chinese people think it’s the girl’s fault, so it’s something that is difficult in our mind,” Mengping tells her.</p>
 
 <p>“Well, I don’t always think it’s the girl’s fault,” says Maya, “but I know that’s what a lot of people think when they hear about women being assaulted.”</p>
 
-<p>“Yes,” says Mengping. “Now my mind has changed. We should not blame them, and the government and laws should protect them. My mind has changed.”  <span><img border=0 width=17 height=17 id="Picture 1" src="CH3%20Text%20for%20website%20w%20links%202015-11-13%20(1)_files/image001.png"></span></p> </div>
+<p>“Yes,” says Mengping. “Now my mind has changed. We should not blame them, and the government and laws should protect them. My mind has changed.” </p> 
+</div>
 
 <div class="footer"> <div class="col1"> <p>Written and Produced by</br> <a href="https://en.wikipedia.org/wiki/Melissa_Ludtke">Melissa Ludtke</a></p> <p>Visual Creation by</br> <a href="http://www.juliemallozzi.com/">Julie Mallozzi</a></p> <p>Website by</br> <a href="https://twitter.com/niteshvgupta">Nitesh</a></p> </div> <div class="col2"></div> <div class="col3"> <ul> <li> <a href="https://www.facebook.com/touchinghomeinchina">Facebook </a> </li> <li> <a href="https://twitter.com/touchinghomechi"> Twitter </a> </li> <li> <a href="https://instagram.com/touchinghomechina/"> Instagram </a> </li> <li> <a href="https://www.youtube.com/channel/UCS8FAkLSibDl-QwBEdCXvtA"> YouTube </a> </li> <li> <a href="mailto:touchinghomechina@gmail.com"> Email </a> </li> </ul> </div> </div>
 
@@ -375,6 +489,85 @@ var openGallery9 = function() {
 };
 
 document.getElementById('gallery9').onclick = openGallery9;
+
+
+var openGallery10 = function() { 
+  var pswpElement = document.querySelectorAll('.pswp')[0];
+
+// build items array
+  var items = [ 
+    { 
+      src: 'images/galleries/10/01-chen-liuhong.jpg', 
+      w: 700, 
+      h: 482,
+      title: "Jin Shan’s mother, Chen Liuhong (right), with a high school friend, 11088." 
+    },
+    { 
+      src: 'images/galleries/10/02-xining-1989-jin-jianru-works-as-tailorimg_1903.jpg', 
+      w: 700, 
+      h: 1066,
+      title: "Jin Shan’s father, Jin Jianru (left), in Xining as a migrant tailor, 11089." 
+    },
+    { 
+      src: 'images/galleries/10/03-changzhou-age-20-chen-trying-on-wedding-gown-at-photo-studio-img_1889.jpg', 
+      w: 700, 
+      h: 1015,
+      title: "Chen Liuhong poses for her wedding photo in Xixiashu, 11093." 
+    },
+    { 
+      src: 'images/galleries/10/04-beijing-1995--fall-img_1914.jpg', 
+      w: 700, 
+      h: 4610,
+      title: "Shan’s parents, Jin Jianru and Chen Liuhong, in Beijing, 11095." 
+    },
+        { 
+      src: 'images/galleries/10/05-xixiashu-jin-shan-100-days-ceremony-1995-img_1891.jpg', 
+      w: 700, 
+      h: 1026,
+      title: "Jin Shan’s 100-day ceremony in Xixiashu, 11095." 
+    },
+    { 
+      src: 'images/galleries/10/06-beijing-1995-img_1931.jpg', 
+      w: 700, 
+      h: 1032,
+      title: "Chen Liuhong in Beijing, while Jinshan was left behind with her grandparents in Xixiashu, 11095." 
+    },
+    { 
+      src: 'images/galleries/10/07-jinan-shandong-prov-2001-chen-liuhong-jin-shan-age-6-img_1919.jpg', 
+      w: 700, 
+      h: 465,
+      title: "Jin Shan on a visit with her mother, Chen Liuhong, in Jinan, Shandong province, 2001." 
+    },
+    { 
+      src: 'images/galleries/10/08-jin-shan-and-cousin.jpg', 
+      w: 700, 
+      h: 3104,
+      title: "Jin Shan with her older cousin in the pharmacy where she works, Xixiashu, 2014." 
+    },
+    { 
+      src: 'images/galleries/10/09-family-photo.jpg', 
+      w: 700, 
+      h: 3104,
+      title: "Jin Shan with her parents at Lunar New Year, 2014." 
+    },
+    { 
+      src: 'images/galleries/10/10-jin-shan-mothers-family-portrait-2014.jpg', 
+      w: 700, 
+      h: 3104,
+      title: "Jin Shan with her maternal grandparents (front row); male cousin, mother, female cousin, Jin Shan, father, aunt, uncle (back row, left to right), 2014." 
+    }
+  ];
+  // define options (if needed) 
+  var options = { focus: false, index: 0, showAnimationDuration: 0, hideAnimationDuration: 0, loop: false }; 
+  var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options); 
+  gallery.init(); 
+};
+
+document.getElementById('gallery10').onclick = openGallery10;
+
+
+
+
 </script>
 
 </body>
