@@ -142,6 +142,7 @@ div#well-trodden-path {
     border-radius: .25em;
     position: relative;
 }
+
 .aside-image, .aside-timeline, .aside-title, .col1, .col2, .col3, .girls-img-block, .image {
     display: inline-block;
 }
@@ -166,10 +167,34 @@ div#well-trodden-path {
     padding-bottom: 10px;
 }
 .aside-image .caption-text {
-    position: absolute;
-    bottom: -3px;
-    left: 15px;
+    position: relative;
+    top: -15px;
+    left: 10px;
 }
+
+@media (max-width:46em) {
+
+    .aside h5 {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .aside {
+        border-radius: 0;
+        border: 0;
+        border-top: 1.2px solid #D90B00;
+        border-bottom: 1.2px solid #D90B00;
+    }
+
+    .aside-image img {
+        max-width: 110vw;        
+        padding: 0;
+        margin: 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
 .aside h5, h6 {
     padding: 1px 0 0;
     margin-top: -5px;
