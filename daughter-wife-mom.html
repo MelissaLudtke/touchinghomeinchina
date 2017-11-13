@@ -18,28 +18,66 @@
   <script src="js/photoswipe-ui-default.min.js"></script>
 </head>
 <body>
-  <div class="m-wrapper">
-   <div class="m">
-     <a href="index.html" class="m-logo">Touching Home In China</a>
-   </div>
-   <div class="m m-right">
-     <ul class="m-list">
-       <li class="m-item m-dropdown">
-         <a href="#">Stories</a>
-         <ul class="m-children">
-           <li class="m-item">
-             <a href="index.html#abandoned-baby">Abandoned Baby</a>
-           </li>
-           <li class="m-item"><a href="touching-home.html">Touching Home</a></li> <li class="m-item"><a href="daughter-wife-mom.html">Daughter. Wife. Mother.</a>
-         </li> <li class="m-item">
-         <a href="learning-about-learning.html">Learning About Learning</a>
-       </li> <li class="m-item"><a href="womens-work.html">Women's Work</a></li>
-       <li class="m-item"><a href="the-girls-reflect.html">The Girls Reflect</a></li> </ul> </li> <li class="m-item"><a href="the-girls.html">The Girls</a></li> <li class="m-item"><a href="timeline.html">Timeline</a></li>
-       <li class="m-item"><a href="resources.html">Lesson Plans</a></li> <li class="m-item"><a href="about.html">About</a></li> </ul> </div> <div class="m-mobile"> <a href="#" id="m-toggle"><s class="m-bar"></s><s class="m-bar"></s></a> <ul class="m-children" id="m-side"> <li class="m-item"><a href="index.html#abandoned-baby">Abandoned Baby</a></li>
-       <li class="m-item"><a href="touching-home.html">Touching Home</a></li>
-       <li class="m-item"><a href="daughter-wife-mom.html">Daughter. Wife. Mother.</a></li> <li class="m-item"><a href="learning-about-learning.html">Learning About Learning</a></li> <li class="m-item"><a href="womens-work.html">Women's Work</a></li> <li class="m-item"><a href="the-girls-reflect.html">The Girls Reflect</a></li> <li><hr style="width:50%;border-color:red;text-align:center;margin-left:25%;margin-top:5px;margin-bottom:5px" /></li> <li class="m-item"><a href="the-girls.html">The Girls</a></li> <li class="m-item"><a href="timeline.html">Timeline</a></li> <li class="m-item"><a href="resources.html">Lesson Plans</a></li> <li class="m-item"><a href="about.html">About</a></li> </ul> </div> <script> function toggleMenu() { document.getElementById('m-toggle').classList.toggle('x'); document.getElementById('m-side').classList.toggle('x'); };
+<div class="m-wrapper">
+    <div class="m">
+        <a href="index.html" class="m-logo">Touching Home In China</a>
+    </div>
+    <div class="m m-right">
+        <ul class="m-list">
+            <li class="m-item m-dropdown">
+                <a href="#">Stories</a>
+                <ul class="m-children">
+                    <li class="m-item">
+                        <a href="index.html#abandoned-baby">Abandoned Baby</a>
+                    </li>
+                    <li class="m-item"><a href="touching-home.html">Touching Home</a></li>
+                    <li class="m-item"><a href="daughter-wife-mom.html">Daughter. Wife. Mother.</a>
+                    </li>
+                    <li class="m-item">
+                        <a href="learning-about-learning.html">Learning About Learning</a>
+                    </li>
+                    <li class="m-item"><a href="womens-work.html">Women's Work</a></li>
+                    <li class="m-item"><a href="the-girls-reflect.html">The Girls Reflect</a></li>
+                </ul>
+            </li>
+            <li class="m-item"><a href="the-girls.html">The Girls</a></li>
+            <li class="m-item"><a href="timeline.html">Timeline</a></li>
+            <li class="m-item"><a href="resources.html">Lesson Plans</a></li>
+            <li class="m-item"><a href="about.html">About</a></li>
+        </ul>
+    </div>
+    <div class="m-mobile">
+        <a href="#" id="m-toggle">
+            <s class="m-bar"></s>
+            <s class="m-bar"></s>
+        </a>
+        <ul class="m-children" id="m-side">
+            <li class="m-item"><a href="index.html#abandoned-baby">Abandoned Baby</a></li>
+            <li class="m-item"><a href="touching-home.html">Touching Home</a></li>
+            <li class="m-item"><a href="daughter-wife-mom.html">Daughter. Wife. Mother.</a></li>
+            <li class="m-item"><a href="learning-about-learning.html">Learning About Learning</a></li>
+            <li class="m-item"><a href="womens-work.html">Women's Work</a></li>
+            <li class="m-item"><a href="the-girls-reflect.html">The Girls Reflect</a></li>
+            <li>
+                <hr style="width:50%;border-color:red;text-align:center;margin-left:25%;margin-top:5px;margin-bottom:5px" />
+            </li>
+            <li class="m-item"><a href="the-girls.html">The Girls</a></li>
+            <li class="m-item"><a href="timeline.html">Timeline</a></li>
+            <li class="m-item"><a href="resources.html">Lesson Plans</a></li>
+            <li class="m-item"><a href="about.html">About</a></li>
+        </ul>
+    </div>
+    <script>
+    function toggleMenu() {
+        document.getElementById('m-toggle').classList.toggle('x');
+        document.getElementById('m-side').classList.toggle('x');
+    };
 
-      document.getElementById('m-toggle').addEventListener('click', function (e) { toggleMenu(); }); </script> </div>
+    document.getElementById('m-toggle').addEventListener('click', function(e) {
+        toggleMenu();
+    });
+    </script>
+</div>
 
 <nav id="social-sidebar">
   <ul>
@@ -62,7 +100,7 @@
 
 <div class="main-content"> <p><span class="lead-c">I</span>n traditional <a href="https://en.wikipedia.org/wiki/Chinese_culture">Chinese culture</a>, a son’s life is told in the characters of his name. A month after he’s born, his paternal grandfather bestows on him a distinctive name. Often this name bespeaks strength and leadership, attributes he’ll need to fulfill his filial piety. In school and in marriage, at work and in society, names are added to his given one; each enhances the story of the man he is becoming. Lengthened by his deeds, this name ripens with age as he assumes esteemed status as family elder. In death,his name is preserved in family history, granting for eternity what he possessed in life – the privilege of self-description.</p> <div class="img-half right"> <img src="images/daughter-wife-mom/orchid.jpg" alt='orchid'/> </div>
 
-<p>A Chinese daughter’s life is also <a href="http://www.readcube.com/articles/10.1525%2Fae.1986.13.4.02a00020?r3_referer=wol&amp;tracking_action=preview_click&amp;show_checkout=1&amp;purchase_referrer=onlinelibrary.wiley.com&amp;purchase_site_license=LICENSE_DENIED_NO_CUSTOMER"><span style='font-family:Garamond'>foretold in her name</span></a>. She may be given a flowery one, such as “Splendid Orchid,” expressing her family’s hope that beauty guides her fate. Sometimes a girl carries a family’s disappointment in her given name – “Little Mistake,” or “Seeking a Little Brother.” A daughter burdens her family until she marries; then she is an outside daughter, belonging to her husband’s family. People might call her “husband’s wife” or “son’s mother,” names others like her are called. As an elder, she answers to “old woman.” This seems apt preparation to depart a life devoid of self-description.</p>
+<p>A Chinese daughter’s life is also <a href="http://www.readcube.com/articles/10.1525%2Fae.1986.13.4.02a00020?r3_referer=wol"><span style='font-family:Garamond'>foretold in her name</span></a>. She may be given a flowery one, such as “Splendid Orchid,” expressing her family’s hope that beauty guides her fate. Sometimes a girl carries a family’s disappointment in her given name – “Little Mistake,” or “Seeking a Little Brother.” A daughter burdens her family until she marries; then she is an outside daughter, belonging to her husband’s family. People might call her “husband’s wife” or “son’s mother,” names others like her are called. As an elder, she answers to “old woman.” This seems apt preparation to depart a life devoid of self-description.</p>
 
 <p>These archetypes trace the gendered trajectories of children growing up in Chinese families not so long ago. Now, as grandparents, they watch with wonderment as the ambitions and sensibilities of 21st century girls expand in ways unimagined in their younger years. Stubborn gender traditions still tug at them.</p>
 
@@ -480,7 +518,7 @@ Voicing Discontent
 </div>
 
 
-<p>Yuan’s activism alerts her to predictable barriers young women like these Xiaxi girls are likely to encounter. As more girls graduate from high school – and do better, on average, academically than boys – some <a href="http://www.nytimes.com/2012/10/08/world/asia/08iht-educlede08.html?n=Top%2fNews%2fWorld%2fCountries%20and%20Territories%2fChina&amp;_r=1"><span style='font-family:Garamond'>universities admit males with lower <i>gaokao</i> scores</span></a> than girls they reject. (In China, the <i>gaokao</i> exam is the sole measure used for university admittance.) Women students are <a href="http://www.womenofchina.cn/womenofchina/html1/news/china/1410/637-1.htm"><span style='font-family:Garamond'>steered away from certain majors</span></a>, notably national security – for example, police academies accept few women – along with others regarded as physically demanding, like geosciences and aeronautics. &quot;Due to the special nature of the work, it is not suitable for girls to apply&quot; to marine technology and engineering courses, an official at one maritime university told a reporter for a story about gender bias at universities. Disparaging treatment of female students and staff assistants by male faculty is a topic ripe for discussion on social media.  Still, despite these challenges and fewer women among China’s college-aged population, <a href="http://www.womenofchina.cn/womenofchina/html1/survey/16/7030-1.htm"><span style='font-family:Garamond'>females outnumber males as university students</span></a> at the undergraduate and master degree level.</p>
+<p>Yuan’s activism alerts her to predictable barriers young women like these Xiaxi girls are likely to encounter. As more girls graduate from high school – and do better, on average, academically than boys – some <a href="http://www.nytimes.com/2012/10/08/world/asia/08iht-educlede08.html?n=Top%2fNews%2fWorld%2fCountries%20and%20Territories%2fChina"><span style='font-family:Garamond'>universities admit males with lower <i>gaokao</i> scores</span></a> than girls they reject. (In China, the <i>gaokao</i> exam is the sole measure used for university admittance.) Women students are <a href="http://www.womenofchina.cn/womenofchina/html1/news/china/1410/637-1.htm"><span style='font-family:Garamond'>steered away from certain majors</span></a>, notably national security – for example, police academies accept few women – along with others regarded as physically demanding, like geosciences and aeronautics. &quot;Due to the special nature of the work, it is not suitable for girls to apply&quot; to marine technology and engineering courses, an official at one maritime university told a reporter for a story about gender bias at universities. Disparaging treatment of female students and staff assistants by male faculty is a topic ripe for discussion on social media.  Still, despite these challenges and fewer women among China’s college-aged population, <a href="http://www.womenofchina.cn/womenofchina/html1/survey/16/7030-1.htm"><span style='font-family:Garamond'>females outnumber males as university students</span></a> at the undergraduate and master degree level.</p>
 
 
     <p>After they graduate, women often <a href="http://www.bbc.com/news/world-asia-24534782"><span style='font-family: Garamond'>confront discrimination in applying for jobs</span></a>. “Some advertisements say ‘no women, we only want men,’” Yuan tells me. “Others tell a woman she should not be married if she wants to apply for the job,” despite China’s 2008 Law on Employment Promotion prohibiting such practices. Some ads are explicit about what they seek in an employee: a sales job ad, for example, said the applicant must be “a pretty woman with height no less than 1.7 meters.”</p>
@@ -498,7 +536,7 @@ Voicing Discontent
   </div>
 </div>
 
-<p>On the day before International Women’s Day, the <a href="http://www.hrichina.org/en/supporting-womens-rights-china?utm_source=HRIC+Updates&amp;utm_campaign=de01445748-Supporting_Womens_Rights_China_3_26_2015&amp;utm_medium=email&amp;utm_term=0_b537d30fde-de01445748-242674929"><span style='font-family:Garamond'>Chinese government arrested 10 women’s rights activists</span></a>. At first, they were charged with &quot;picking quarrels and provoking trouble,&quot; but when five of the women were jailed in Beijing the formal charge became &quot;assembling a crowd to disrupt order in a public place.&quot; This time the police had arrested the women before they’d acted; the activists’ plan was to put up stickers in subway stations to spotlight sexual harassment on public transportation. By revising the charge against them, the government <a href="https://www.opendemocracy.net/5050/ting-guo/blood-brides-feminist-activists-cracking-chinas-patriarchal-order"><span style='font-family:Garamond'>linked the women to past demonstrations</span></a> as well. The five women were released after 37 days in jail and remain closely monitored as suspects.</p>
+<p>On the day before International Women’s Day, the <a href="http://www.hrichina.org/en/supporting-womens-rights-china?utm_source=HRIC+Updates"><span style='font-family:Garamond'>Chinese government arrested 10 women’s rights activists</span></a>. At first, they were charged with &quot;picking quarrels and provoking trouble,&quot; but when five of the women were jailed in Beijing the formal charge became &quot;assembling a crowd to disrupt order in a public place.&quot; This time the police had arrested the women before they’d acted; the activists’ plan was to put up stickers in subway stations to spotlight sexual harassment on public transportation. By revising the charge against them, the government <a href="https://www.opendemocracy.net/5050/ting-guo/blood-brides-feminist-activists-cracking-chinas-patriarchal-order"><span style='font-family:Garamond'>linked the women to past demonstrations</span></a> as well. The five women were released after 37 days in jail and remain closely monitored as suspects.</p>
 
 <p>When I was Maya and Jennie’s age, American women were demonstrating in the streets about unequal treatment. I was 17 when the New York Radical Women showed up at the <a href="http://www.pbs.org/wgbh/amex/missamerica/peopleevents/e_feminists.html"><span style='font-family:Garamond'>1968 Miss America pageant</span></a> carrying signs saying “Women are not meat” – likening beauty pageants to cattle auctions. Girdles, bras, high-heeled shoes, hair curlers, and copies of <i>Good Housekeeping</i> were tossed into the “Freedom Trash Can” to symbolize women’s release from oppression. Crowds jeered as the women did this, giving TV cameras the confrontational images that characterized this emerging equal rights campaign.</p>
 
